@@ -18,7 +18,7 @@ export const changeActiveBtn = (dataUse) => {
 
 
 
-const stop = () => {
+export const stop = () => {
     clearTimeout(state.timerId);
     btnStart.textContent = 'Старт';
     state.timeLeft = state[state.status] * 60;
