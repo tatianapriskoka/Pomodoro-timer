@@ -15,8 +15,6 @@ const title = document.title;
 
 export const startTimer = () => {
     const countdown = new Date().getTime() + state.timeLeft * 1000;
-    console.log(countdown);
-
 
     state.timerId = setInterval(() => {
         state.timeLeft--;
@@ -32,13 +30,10 @@ export const startTimer = () => {
         if (!(state.timeLeft % 5)) {
             const now = new Date().getTime();
             state.timeLeft = Math.floor((countdown - now) / 1000);
-            console.log('синхрон');
         }
 
 
-
         alarm();
-
 
         if (state.status === 'work') {
             state.activeTodo.pomodoro += 1;

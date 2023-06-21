@@ -12,4 +12,7 @@ const audio = {
 
 export const alarm = () => {
     audio[state.status].play();
+    audio.work.volume = 0.2;
+    audio.break.volume = 0.2;
+    audio.relax.volume = 0.2;
 }
